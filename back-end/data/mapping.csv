@@ -1,0 +1,29 @@
+OriginalColumnName,GoalColumnName
+Theatre,theatre
+Surgical Start,date
+MainSurgeon,surgeon_fullname
+OperationRecordID,case_key
+SessionRecordID,schedule_key
+SpecialtyDescription,specialism_name
+ProcedureCode 1,procedure_code
+Procedure 1 Description,procedure_description
+Surgical Start,actual_start_case_datetime
+Surgical End,actual_end_case_datetime
+OK dat,date
+OK,theatre
+Snijder,surgeon_fullname
+Verr code,protocol_code
+Spec.,specialism_name
+Op OK,actual_start_case_datetime
+Uit OK,actual_end_case_datetime
+Theatre Case Number,case_key
+Session ID,session_key
+ConsultantSpecialty (group),specialism_name
+Case Start Date Time,actual_start_case_datetime
+Planned Case Start,expected_start_case_datetime
+Case End Date Time,actual_end_case_datetime
+Planned Case End,expected_end_case_datetime
+VisitDate,date
+Consultant In Charge Of Procedure,surgeon_fullname
+Verr. code,procedure_name
+ProcedureCode 1,procedure_name
