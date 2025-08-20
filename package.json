@@ -1,0 +1,18 @@
+{
+  "name": "incision-metric-data-uploader",
+  "version": "1.0.0",
+  "description": "A full-stack application for uploading and analyzing metric data",
+  "private": true,
+  "workspaces": [
+    "front-end"
+  ],
+  "scripts": {
+    "dev": "cd front-end && npm run dev",
+    "build": "cd front-end && npm run build",
+    "preview": "cd front-end && npm run preview",
+    "lint": "cd front-end && npm run lint"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
