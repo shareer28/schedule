@@ -5,11 +5,15 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
   "env": {
-    "VITE_API_URL": "https://api.example.com"
+    "VITE_API_URL": "https://schedule-phi.vercel.app/api"
   }
 }

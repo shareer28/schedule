@@ -13,8 +13,10 @@ app = FastAPI(
 origins = [
     "http://localhost:5173",
     "http://0.0.0.0:5173",
-    "https://schedule-phi.vercel.app",  # Your Vercel front-end URL
-    "https://schedule-git-main-shareer28.vercel.app"  # Alternative Vercel URL format
+    "https://schedule-phi.vercel.app",
+    "https://schedule-git-main-shareer28.vercel.app",
+    "https://schedule.vercel.app",
+    "https://*.vercel.app"  # Allow all Vercel subdomains
 ]
 
 @app.get("/")
