@@ -7,6 +7,12 @@
 node_modules/
 dist/
 
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
 # Compiled Java class files
 *.class
 
