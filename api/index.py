@@ -19,3 +19,8 @@ except ImportError as e:
             "statusCode": 500,
             "body": f"Import error: {e}"
         }
+
+# For local development
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
