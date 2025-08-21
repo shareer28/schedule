@@ -4,8 +4,18 @@ import os
 # Add the back-end directory to the Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'back-end'))
 
-from app.main import app
-from mangum import Mangum
-
-# Create a handler for AWS Lambda / Vercel
-handler = Mangum(app)
+try:
+    from app.main import app
+    from mangum import Mangum
+    
+    # Create a handler for AWS Lambda / Vercel
+    handler = Mangum(app, lifespan="off")
+    
+except ImportError as e:
+    print(f"Import error: {e}")
+    # Fallback handler for debugging
+    def handler(event, context):
+        return {
+            "statusCode": 500,
+            "body": f"Import error: {e}"
+        }

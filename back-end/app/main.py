@@ -17,6 +17,14 @@ origins = [
     "https://schedule-git-main-shareer28.vercel.app"  # Alternative Vercel URL format
 ]
 
+@app.get("/")
+async def root():
+    return {"message": "API is running!", "status": "healthy"}
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "service": "incision-metric-data-uploader-api"}
+
 app.include_router(api_router)
 app.add_middleware(
     CORSMiddleware,

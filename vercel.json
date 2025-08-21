@@ -19,6 +19,6 @@
     }
   },
   "env": {
-    "VITE_API_URL": "https://your-railway-backend-url.railway.app"
+    "VITE_API_URL": "https://schedule-phi.vercel.app/api"
   }
 }
