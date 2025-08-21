@@ -6,7 +6,7 @@ export const useTableStore = create<ITableStore>(
     {
       tableName: undefined,
     } as ITableStore,
-    (set, get) => ({
+    (set, _get) => ({
       setTableName: (tableName: string) => {
         set(() => ({
           tableName,

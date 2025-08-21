@@ -2,7 +2,6 @@ import {
   coordinator,
   makeClient,
   MosaicClient,
-  type QueryType,
 } from "@uwdata/mosaic-core";
 import { useEffect, useState } from "react";
 import { Table as DuckTable } from "@uwdata/flechette";
@@ -14,7 +13,7 @@ import InspectTable from "./components/InspectTable";
 import ChatInput from "./components/ChatInput";
 import { useSendMessage } from "@/api/hooks/sendMessage";
 import { useDescribeQuery } from "@/api/hooks/describeQuery";
-import { toast } from "sonner";
+
 
 const InspectPage = () => {
   const [queryResult, setQueryResult] = useState<DuckTable>();
@@ -30,12 +29,10 @@ const InspectPage = () => {
     })
   );
   const { tableName } = useTableStore();
-  const { mutate: sendMessage, data: response } = useSendMessage();
+  const { mutate: sendMessage } = useSendMessage();
   const {
     mutate: getQueryDescription,
     data: schema,
-    isPending,
-    isSuccess,
   } = useDescribeQuery();
 
   useEffect(() => {

@@ -21,6 +21,7 @@
     "@tanstack/react-query": "^5.76.1",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.13.8",
+    "@types/uuid": "^10.0.0",
     "@uwdata/mosaic-core": "^0.16.2",
     "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",
@@ -36,6 +37,7 @@
     "sonner": "^2.0.5",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.6",
+    "uuid": "^11.1.0",
     "zod": "^3.24.4",
     "zustand": "^5.0.5"
   },

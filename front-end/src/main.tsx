@@ -12,10 +12,16 @@ import router from "./routes.tsx";
 
 // Coordinator is a singleton
 const coordinator = _coordinator();
-await coordinator.databaseConnector(wasmConnector());
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
-);
+// Initialize the database connector
+const initApp = async () => {
+  await coordinator.databaseConnector(wasmConnector());
+  
+  createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  );
+};
+
+initApp().catch(console.error);

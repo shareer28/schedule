@@ -1,4 +1,4 @@
-import { ExprNode, SelectQuery, WithClauseNode } from "@uwdata/mosaic-sql";
+import { SelectQuery, WithClauseNode } from "@uwdata/mosaic-sql";
 
 export const getNodeQuery = (
   selectQuery: SelectQuery,
